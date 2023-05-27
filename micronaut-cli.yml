@@ -1,0 +1,6 @@
+applicationType: default
+defaultPackage: cloud.elide.sample.micronaut4
+testFramework: junit
+sourceLanguage: kotlin
+buildTool: gradle_kotlin
+features: [app-name, graalvm, gradle, http-client-test, jackson-databind, junit, kotlin, kotlin-application, kotlin-extension-functions, ksp, logback, micronaut-build, netty-server, properties, readme, shade]
