@@ -23,6 +23,13 @@ on:
 
 jobs:
   ## Build sample app
+  hello:
+    name: "Test: Stub"
+    uses: elide-dev/build-infra/.github/workflows/stub.yml@main
+
+  ## Build sample app
   build-sample:
     name: "Build: Sample"
-    uses: elide-dev/build-infra/.github/workflows/stub.yml@main
+    uses: elide-dev/build-infra/.github/workflows/jvm.gradle.yml@main
+    with:
+      action: 'build'
