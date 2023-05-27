@@ -26,7 +26,7 @@ on:
 jobs:
   ## Build sample app
   build-sample:
-    name: "Build: Sample"
+    name: "Sample App"
     uses: elide-dev/build-infra/.github/workflows/jvm.gradle.yml@main
     secrets: inherit
     permissions:
