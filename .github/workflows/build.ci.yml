@@ -39,3 +39,4 @@ jobs:
       contents: read
     with:
       action: 'build'
+      runner: ubuntu-latest
