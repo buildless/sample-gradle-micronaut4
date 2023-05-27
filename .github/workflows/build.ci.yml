@@ -32,5 +32,9 @@ jobs:
     name: "Build: Sample"
     uses: elide-dev/build-infra/.github/workflows/jvm.gradle.yml@main
     secrets: inherit
+    permissions:
+      checks: write
+      pull-requests: read
+      id-token: write
     with:
       action: 'build'
