@@ -35,5 +35,4 @@ jobs:
       id-token: write
       contents: read
     with:
-      action: 'build'
       runner: ubuntu-latest
