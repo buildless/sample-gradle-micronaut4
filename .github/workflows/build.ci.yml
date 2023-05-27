@@ -37,4 +37,3 @@ jobs:
     with:
       runner: ubuntu-latest
       flags: '--scan --stacktrace'
-      cache_remote: false
