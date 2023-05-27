@@ -16,3 +16,12 @@ It's a regular Gradle codebase, expressed as a single module, so you can just do
 ```
 ./gradlew run
 ```
+
+## Running the tests
+
+You guessed it:
+
+```
+./gradlew test
+```
+
