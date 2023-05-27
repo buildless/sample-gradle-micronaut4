@@ -10,6 +10,7 @@ on:
       - build.gradle.kts
       - gradle.properties
       - settings.gradle.kts
+      - .github
 
   pull_request:
     paths:
@@ -18,6 +19,7 @@ on:
       - build.gradle.kts
       - gradle.properties
       - settings.gradle.kts
+      - .github
 
 jobs:
   ## Build sample app
