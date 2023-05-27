@@ -36,3 +36,4 @@ jobs:
       contents: read
     with:
       runner: ubuntu-latest
+      flags: '--scan'
