@@ -36,5 +36,6 @@ jobs:
       checks: write
       pull-requests: read
       id-token: write
+      contents: read
     with:
       action: 'build'
