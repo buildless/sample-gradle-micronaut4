@@ -1,18 +1,18 @@
-## Micronaut 4.0.0-M2 Documentation
 
-- [User Guide](https://docs.micronaut.io/4.0.0-M2/guide/index.html)
-- [API Reference](https://docs.micronaut.io/4.0.0-M2/api/index.html)
-- [Configuration Reference](https://docs.micronaut.io/4.0.0-M2/guide/configurationreference.html)
-- [Micronaut Guides](https://guides.micronaut.io/index.html)
----
+# micronaut 4 sample
 
-- [Micronaut Gradle Plugin documentation](https://micronaut-projects.github.io/micronaut-gradle-plugin/latest/)
-- [GraalVM Gradle Plugin documentation](https://graalvm.github.io/native-build-tools/latest/gradle-plugin.html)
-- [Shadow Gradle Plugin](https://plugins.gradle.org/plugin/com.github.johnrengelman.shadow)
-## Feature ksp documentation
+[buildless](https://less.build), [micronaut v4](https://docs.micronaut.io/4.0.0-M2/guide/index.html),
+[kotlin](https://kotlinlang.org), and [gradle](https://gradle.org).
 
-- [Micronaut Kotlin Symbol Processing (KSP) documentation](https://docs.micronaut.io/latest/guide/#kotlin)
+## Details about this sample
 
-- [https://kotlinlang.org/docs/ksp-overview.html](https://kotlinlang.org/docs/ksp-overview.html)
+This sample uses Micronaut v4, which, at the time of this writing, is still experimental. It also uses Kotlin version
+`1.9`, which is still in `beta`. It is used as an integration test and canary for [Buildless](https://less.build).
 
+## Running this sample
 
+It's a regular Gradle codebase, expressed as a single module, so you can just do:
+
+```
+./gradlew run
+```
