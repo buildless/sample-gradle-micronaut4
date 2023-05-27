@@ -23,6 +23,6 @@ jobs:
   ## Build sample app
   build-sample:
     name: "Build: Sample"
-    uses: elide-dev/build-infra/workflows/jvm/gradle-build.yml@main
+    uses: elide-dev/build-infra/.github/workflows/pkg/jvm/gradle-build.yml@main
     with:
       action: 'build'
