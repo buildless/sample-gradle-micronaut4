@@ -5,7 +5,8 @@ on:
     branches:
       - main
     paths:
-      - src
+      - "*.kt"
+      - "*.kts"
       - gradle
       - build.gradle.kts
       - gradle.properties
@@ -14,7 +15,8 @@ on:
 
   pull_request:
     paths:
-      - src
+      - "*.kt"
+      - "*.kts"
       - gradle
       - build.gradle.kts
       - gradle.properties
