@@ -36,4 +36,4 @@ jobs:
       contents: read
     with:
       runner: ubuntu-latest
-      flags: '--scan --stacktrace --debug'
+      flags: '--scan --stacktrace'
