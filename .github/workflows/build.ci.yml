@@ -35,7 +35,7 @@ jobs:
       id-token: write
       contents: read
     with:
-      jvm: ${{ vars.JVM_VERSION }}
+      jvm: '19'
       runner: ubuntu-latest
       flags: '--scan --stacktrace'
 
