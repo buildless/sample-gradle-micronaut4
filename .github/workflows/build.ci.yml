@@ -28,7 +28,9 @@ jobs:
   build-sample:
     name: "Sample App"
     uses: elide-dev/build-infra/.github/workflows/jvm.gradle.yml@main
-    secrets: inherit
+    secrets:
+      BUILDLESS_APIKEY: ${{ secrets.BUILDLESS_APIKEY }}
+      SONAR_TOKEN: ${{ secrets.SONAR_TOKEN }}
     permissions:
       checks: write
       pull-requests: read
