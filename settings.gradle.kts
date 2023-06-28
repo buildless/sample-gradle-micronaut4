@@ -3,7 +3,7 @@
     "UnstableApiUsage"
 )
 
-import build.less.plugin.gradle.settings.*
+import build.less.plugin.settings.buildless
 
 pluginManagement {
     repositories {
