@@ -33,7 +33,8 @@ jobs:
       checks: write
       pull-requests: read
       id-token: write
-      contents: read
+      actions: read
+      contents: write
     with:
       jvm: '19'
       runner: ubuntu-latest
