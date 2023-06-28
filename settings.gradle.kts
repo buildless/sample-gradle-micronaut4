@@ -3,6 +3,8 @@
     "UnstableApiUsage"
 )
 
+import build.less.plugin.gradle.settings.*
+
 pluginManagement {
     repositories {
         maven("https://gradle.pkg.st/")
