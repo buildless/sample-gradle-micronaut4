@@ -35,6 +35,7 @@ dependencyResolutionManagement {
     )
     repositories {
         maven("https://maven.pkg.st/")
+        mavenCentral()
     }
     versionCatalogs {
         create("mn") {

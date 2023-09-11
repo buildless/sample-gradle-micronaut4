@@ -99,3 +99,10 @@ configurations.all {
     exclude(group = it.first, module = it.second)
   }
 }
+
+listOf("buildLayers").forEach {
+  tasks.named(it).configure {
+    doNotTrackState("too big for build cache")
+  }
+}
+
