@@ -28,6 +28,10 @@ val strictMode = strict == "true"
 val kotlinVersionEnum = org.jetbrains.kotlin.gradle.dsl.KotlinVersion.KOTLIN_1_9
 val jvmTargetEnum = org.jetbrains.kotlin.gradle.dsl.JvmTarget.JVM_19
 val javaVersionEnum = JavaVersion.VERSION_19
+val globalExclusions = listOf(
+  "io.micronaut" to "micronaut-bom",
+  "io.micronaut.chatbots" to "micronaut-chatbots-bom",
+)
 
 dependencies {
     implementation("io.micronaut:micronaut-jackson-databind")
@@ -87,5 +91,11 @@ kotlin {
 afterEvaluate {
   tasks.withType(KotlinCompile::class).configureEach {
     kotlinOptions.jvmTarget = javaVersion
+  }
+}
+
+configurations.all {
+  globalExclusions.forEach {
+    exclude(group = it.first, module = it.second)
   }
 }
