@@ -10,11 +10,11 @@ import org.jetbrains.kotlin.gradle.plugin.mpp.pm20.util.targets
 import org.jetbrains.kotlin.gradle.tasks.KotlinCompile
 
 plugins {
-    id("org.jetbrains.kotlin.jvm") version "1.9.0-Beta"
-    id("org.jetbrains.kotlin.plugin.allopen") version "1.9.0-Beta"
-    id("com.google.devtools.ksp") version "1.9.0-Beta-1.0.11"
+    id("org.jetbrains.kotlin.jvm") version "1.9.10"
+    id("org.jetbrains.kotlin.plugin.allopen") version "1.9.10"
+    id("com.google.devtools.ksp") version "1.9.10-1.0.13"
     id("com.github.johnrengelman.shadow") version "8.1.1"
-    id("io.micronaut.application") version "4.0.0-M2"
+    id("io.micronaut.application") version "4.0.3"
 }
 
 version = "0.1"
