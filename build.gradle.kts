@@ -10,11 +10,11 @@ import org.jetbrains.kotlin.gradle.plugin.mpp.pm20.util.targets
 import org.jetbrains.kotlin.gradle.tasks.KotlinCompile
 
 plugins {
-    id("org.jetbrains.kotlin.jvm") version "1.9.0-Beta"
-    id("org.jetbrains.kotlin.plugin.allopen") version "1.9.0-Beta"
-    id("com.google.devtools.ksp") version "1.9.0-Beta-1.0.11"
+    id("org.jetbrains.kotlin.jvm") version "1.9.10"
+    id("org.jetbrains.kotlin.plugin.allopen") version "1.9.10"
+    id("com.google.devtools.ksp") version "1.9.10-1.0.13"
     id("com.github.johnrengelman.shadow") version "8.1.1"
-    id("io.micronaut.application") version "4.0.0-M2"
+    id("io.micronaut.application") version "4.0.3"
 }
 
 version = "0.1"
@@ -28,6 +28,10 @@ val strictMode = strict == "true"
 val kotlinVersionEnum = org.jetbrains.kotlin.gradle.dsl.KotlinVersion.KOTLIN_1_9
 val jvmTargetEnum = org.jetbrains.kotlin.gradle.dsl.JvmTarget.JVM_19
 val javaVersionEnum = JavaVersion.VERSION_19
+val globalExclusions = listOf(
+  "io.micronaut" to "micronaut-bom",
+  "io.micronaut.chatbots" to "micronaut-chatbots-bom",
+)
 
 dependencies {
     implementation("io.micronaut:micronaut-jackson-databind")
@@ -89,3 +93,16 @@ afterEvaluate {
     kotlinOptions.jvmTarget = javaVersion
   }
 }
+
+configurations.all {
+  globalExclusions.forEach {
+    exclude(group = it.first, module = it.second)
+  }
+}
+
+listOf("buildLayers").forEach {
+  tasks.named(it).configure {
+    doNotTrackState("too big for build cache")
+  }
+}
+
