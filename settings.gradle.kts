@@ -12,7 +12,7 @@ pluginManagement {
 }
 
 plugins {
-    id("build.less") version("1.0.0-beta1")
+    id("build.less") version("1.0.0-beta6")
     id("com.gradle.enterprise") version("3.13.4")
     id("org.gradle.toolchains.foojay-resolver-convention") version("0.5.0")
 }
