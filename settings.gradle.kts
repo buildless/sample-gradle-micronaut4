@@ -3,8 +3,6 @@
     "UnstableApiUsage"
 )
 
-import build.less.plugin.settings.buildless
-
 pluginManagement {
     repositories {
         maven("https://gradle.pkg.st/")
@@ -12,9 +10,9 @@ pluginManagement {
 }
 
 plugins {
-    id("build.less") version("1.0.0-beta6")
-    id("com.gradle.enterprise") version("3.13.4")
-    id("org.gradle.toolchains.foojay-resolver-convention") version("0.5.0")
+    id("build.less") version("1.0.0-beta8")
+    id("com.gradle.enterprise") version("3.15.1")
+    id("org.gradle.toolchains.foojay-resolver-convention") version("0.7.0")
 }
 
 val micronautVersion: String by settings
@@ -45,10 +43,6 @@ dependencyResolutionManagement {
 }
 
 rootProject.name = "sample"
-
-buildless {
-  // no add'l settings needed
-}
 
 enableFeaturePreview("STABLE_CONFIGURATION_CACHE")
 enableFeaturePreview("TYPESAFE_PROJECT_ACCESSORS")

@@ -10,11 +10,11 @@ import org.jetbrains.kotlin.gradle.plugin.mpp.pm20.util.targets
 import org.jetbrains.kotlin.gradle.tasks.KotlinCompile
 
 plugins {
-    id("org.jetbrains.kotlin.jvm") version "1.9.10"
-    id("org.jetbrains.kotlin.plugin.allopen") version "1.9.10"
-    id("com.google.devtools.ksp") version "1.9.10-1.0.13"
+    id("org.jetbrains.kotlin.jvm") version "1.9.21"
+    id("org.jetbrains.kotlin.plugin.allopen") version "1.9.21"
+    id("com.google.devtools.ksp") version "1.9.21-1.0.15"
     id("com.github.johnrengelman.shadow") version "8.1.1"
-    id("io.micronaut.application") version "4.0.3"
+    id("io.micronaut.application") version "4.2.0"
 }
 
 version = "0.1"
@@ -67,7 +67,7 @@ java {
 
 kotlin {
   sourceSets.all {
-    languageSettings.progressiveMode = true
+    languageSettings.progressiveMode = false
     languageSettings.languageVersion = kotlinLangVersion
     languageSettings.apiVersion = kotlinLangVersion
   }
