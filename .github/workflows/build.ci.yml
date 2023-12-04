@@ -30,7 +30,7 @@ jobs:
   ## Build sample app
   build-sample:
     name: "Sample App"
-    uses: elide-dev/build-infra/.github/workflows/jvm.gradle.yml@main
+    uses: elide-dev/build-infra/.github/workflows/jvm.gradle.yml@feat/buildless-action
     secrets:
       BUILDLESS_APIKEY: ${{ secrets.BUILDLESS_APIKEY }}
       SONAR_TOKEN: ${{ secrets.SONAR_TOKEN }}
@@ -44,4 +44,3 @@ jobs:
       jvm: '19'
       runner: ubuntu-latest
       flags: '--scan --stacktrace'
-
